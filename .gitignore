@@ -1,0 +1,31 @@
+# EC Language - Compiled executables
+EC.exe
+EC
+__ec_temp.exe
+__ec_temp
+temp_calc.c
+temp_calc.exe
+temp_calc
+
+# Build artifacts
+*.o
+*.obj
+*.exe
+!EC.exe
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.log
+*.bak
