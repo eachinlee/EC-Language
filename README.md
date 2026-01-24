@@ -1,5 +1,5 @@
-# EC-Language / EC 程式語言 (Elegant Code)
-**EC (Elegant Code)** is a next-generation minimalist interpreted programming language. The design goal is to provide complete programming functionality with a core instruction set of only 30 commands.
+# EC 程式語言 (Elegant Code)
+
 ```
     ███████╗ ██████╗
     ██╔════╝██╔════╝
@@ -454,6 +454,32 @@ OUT "C output: " + result
 ```ec
 OUT "Program finished"
 END
+```
+
+---
+
+### 10. 錯誤處理與除錯 (v1.2.0 新增)
+
+EC 語言提供了強大的錯誤偵測機制，協助開發者快速定位問題。
+
+#### 靜態語法檢查 (Static Analysis)
+在執行前，直譯器會檢查程式結構是否正確。例如：遺漏 `ENDIF`、`ENDLOOP` 或 `ENDFN`。
+
+```bash
+Syntax Error: Missing ENDIF detected
+```
+
+#### 執行期堆疊追蹤 (Runtime Stack Trace)
+當程式發生錯誤（如除以零、陣列越界、變數未定義）時，會顯示錯誤訊息與函數呼叫堆疊。
+
+```bash
+[RUNTIME ERROR] at line 15:
+>> DIV x 0
+Details: Division by zero.
+
+Stack Trace:
+  at line 25 (in calculate)
+  at line 40 (in main)
 ```
 
 ---

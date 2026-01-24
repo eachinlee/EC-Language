@@ -458,6 +458,32 @@ END
 
 ---
 
+### 10. Error Handling & Debugging (New in v1.2.0)
+
+EC provides robust error detection mechanisms to help developers locate issues quickly.
+
+#### Static Syntax Analysis
+Before execution, the interpreter checks if the program structure is correct (e.g., missing `ENDIF`, `ENDLOOP`).
+
+```bash
+Syntax Error: Missing ENDIF detected
+```
+
+#### Runtime Stack Trace
+When a runtime error occurs (e.g., division by zero, array out of bounds), EC displays the error message along with the call stack.
+
+```bash
+[RUNTIME ERROR] at line 15:
+>> DIV x 0
+Details: Division by zero.
+
+Stack Trace:
+  at line 25 (in calculate)
+  at line 40 (in main)
+```
+
+---
+
 ## Advanced Features
 
 ### Recursive Functions
